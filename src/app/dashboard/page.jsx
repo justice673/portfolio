@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import { Upload, Link, X, Save } from "lucide-react";
 import { Toaster, toast } from "sonner";
+import Image from "next/image";
 
 export default function NewProduct() {
   const [imageUploadMode, setImageUploadMode] = useState("url");
@@ -96,7 +97,7 @@ export default function NewProduct() {
                 {/* Image Preview */}
                 {imagePreview && (
                   <div className="relative w-full h-64  overflow-hidden">
-                    <img
+                    <Image
                       src={imagePreview}
                       alt="Preview"
                       className="w-full h-full object-cover"
@@ -220,22 +221,6 @@ export default function NewProduct() {
                     placeholder="0.00"
                   />
                 </div>
-
-                {/* <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Stock Quantity
-                  </label>
-                  <input
-                    type="number"
-                    required
-                    className="w-full px-4 py-3 border  focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-                    value={formData.stock}
-                    onChange={(e) =>
-                      setFormData({ ...formData, stock: e.target.value })
-                    }
-                    placeholder="0"
-                  />
-                </div> */}
               </div>
 
               <div>
