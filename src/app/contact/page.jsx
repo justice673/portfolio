@@ -1,8 +1,8 @@
 "use client";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
-import { Notyf } from "notyf";
-import "notyf/notyf.min.css"; // Import Notyf styles
+import { Toaster, toast } from "sonner";
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -11,8 +11,6 @@ export default function Contact() {
     email: "",
     message: "",
   });
-
-  const notyf = new Notyf();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +30,7 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        notyf.success("Message sent successfully!");
+        toast.success("Message sent successfully!");
         setFormData({
           first_name: "",
           last_name: "",
@@ -40,16 +38,18 @@ export default function Contact() {
           message: "",
         });
       } else {
-        notyf.error("Failed to send the message. Please try again.");
+        toast.error("Failed to send the message. Please try again.");
       }
     } catch (error) {
-      notyf.error("An error occurred. Please try again.");
+      toast.error("An error occurred. Please try again.");
     }
   };
 
 
   return (
     <div className="min-h-screen pt-20">
+       {/* Add Toaster Component */}
+       <Toaster position="top-right" />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 py-20 px-4">
         <div className="max-w-7xl mx-auto text-center text-white">
