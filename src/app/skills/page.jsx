@@ -10,13 +10,13 @@ const skills = {
   ],
   backend: [
     { name: 'Node.js', level: 85 },
-    { name: 'Python', level: 80 },
+    { name: 'Python', level: 40 },
     { name: 'MongoDB', level: 85 },
   ],
   tools: [
     { name: 'Git & GitHub', level: 90 },
-    { name: 'Docker', level: 45 },
-    { name: 'AWS', level: 30 },
+    // { name: 'Docker', level: 45 },
+    // { name: 'AWS', level: 30 },
   ]
 };
 
@@ -41,14 +41,14 @@ export default function Skills() {
       </div>
 
       {/* Skills Section */}
-      <div className="max-w-7xl mx-auto px-4 py-20">
+      <div className="max-w-8xl mx-auto px-4 py-20 bg-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 ">
           {Object.entries(skills).map(([category, skillSet]) => (
             <div
               key={category}
               className="shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300"
             >
-              <h2 className="text-2xl font-bold mb-6  text-white capitalize">
+              <h2 className="text-2xl font-bold mb-6  text-indigo-600 capitalize">
                 {category} Development
               </h2>
               <div className="space-y-6">

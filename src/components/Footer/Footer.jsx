@@ -35,7 +35,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/realizations" className="text-gray-400 hover:text-white">
+                <Link href="/realisations" className="text-gray-400 hover:text-white">
                   Projects
                 </Link>
               </li>
@@ -51,13 +51,12 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <Link href="https://github.com/justice673" className="text-gray-400 hover:text-white">
                 <Github className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              </Link>
+              <Link href="https://www.linkedin.com/in/justice-fonge-5087b12b2/" className="text-gray-400 hover:text-white">
                 <Linkedin className="w-6 h-6" />
-              </a>
-              
+              </Link>
             </div>
           </div>
         </div>

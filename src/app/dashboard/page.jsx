@@ -100,6 +100,8 @@ export default function NewProduct() {
                     <Image
                       src={imagePreview}
                       alt="Preview"
+                      width={100}
+                      height={100}
                       className="w-full h-full object-cover"
                     />
                     <button
@@ -119,6 +121,8 @@ export default function NewProduct() {
                 <div className="flex gap-4 mb-4">
                   <button
                     type="button"
+                    width="100%"
+                    height="100%"
                     onClick={() => setImageUploadMode("url")}
                     className={`flex items-center gap-2 px-6 py-3  font-medium transition-all ${
                       imageUploadMode === "url"

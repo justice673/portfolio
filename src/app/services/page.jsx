@@ -14,8 +14,8 @@ const services = [
   },
   {
     icon: <Smartphone className="w-12 h-12 text-indigo-600" />,
-    title: 'Mobile Development',
-    description: 'Cross-platform mobile applications that work seamlessly on all devices.',
+    title: 'Responsive Design',
+    description: 'Custom web applications built that works seamlessly on all device screens such as phone, tablet, computer.',
   },
   {
     icon: <Server className="w-12 h-12 text-indigo-600" />,
@@ -39,9 +39,10 @@ export default function Services() {
     <div className="min-h-screen pt-20 pb-10 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4 text-indigo-600">Our Services</h1>
+          <h1 className="text-4xl font-bold mb-4 text-indigo-600 py-8">My Services</h1>
+          {/* <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-pink-500 mx-auto"></div> */}
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We offer a comprehensive range of digital solutions to help your business grow and succeed in the digital age.
+            I offer a comprehensive range of digital solutions to help your business grow and succeed in the digital age.
           </p>
         </div>
 
@@ -54,9 +55,9 @@ export default function Services() {
               <div className="mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-2 text-indigo-600">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
-              <button className="text-indigo-600 font-medium inline-flex items-center hover:text-indigo-800">
+              {/* <button className="text-indigo-600 font-medium inline-flex items-center hover:text-indigo-800">
                 Learn More <ArrowRight className="w-4 h-4 ml-2 hover:translate-x-1 transition-all" />
-              </button>
+              </button> */}
             </div>
           ))}
         </div>

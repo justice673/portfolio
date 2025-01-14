@@ -3,7 +3,6 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { Toaster, toast } from "sonner";
 
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     first_name: "",
@@ -21,7 +20,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/contact/create", {
+      const response = await fetch("http://127.0.0.1:5000/api/contact/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,11 +44,10 @@ export default function Contact() {
     }
   };
 
-
   return (
     <div className="min-h-screen pt-20">
-       {/* Add Toaster Component */}
-       <Toaster position="top-right" />
+      {/* Add Toaster Component */}
+      <Toaster position="top-right" />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 py-20 px-4">
         <div className="max-w-7xl mx-auto text-center text-white">
@@ -138,14 +136,14 @@ export default function Contact() {
                   <Mail className="w-6 h-6 text-indigo-600 mt-1" />
                   <div>
                     <h3 className="font-medium text-gray-800">Email</h3>
-                    <p className="text-gray-600">contact@example.com</p>
+                    <p className="text-gray-600">fongejustice918@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Phone className="w-6 h-6 text-indigo-600 mt-1" />
                   <div>
                     <h3 className="font-medium text-gray-800">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+237 (673) 746-133</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -153,9 +151,9 @@ export default function Contact() {
                   <div>
                     <h3 className="font-medium text-gray-800">Address</h3>
                     <p className="text-gray-600">
-                      123 Business Street
+                      akwa-douala
                       <br />
-                      New York, NY 10001
+                      DOUALA, CAMEROON
                     </p>
                   </div>
                 </div>
@@ -166,9 +164,9 @@ export default function Contact() {
                       Business Hours
                     </h3>
                     <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM
+                      Monday - Friday: 8:00 AM - 10:00 PM
                       <br />
-                      Weekend: Closed
+                      Weekend: 9:00 AM - 9:00 PM
                     </p>
                   </div>
                 </div>
@@ -183,14 +181,14 @@ export default function Contact() {
               <div className="h-64 bg-gray-200 ">
                 {/* Add your map component here */}
                 <div className="w-full h-full bg-red-300 flex items-center justify-center text-gray-500">
-                  {/* <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.0361667778!2d-74.30934281004731!3d40.69753994660521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2scm!4v1734619517831!5m2!1sen!2scm"
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127357.54623167859!2d9.659401398118437!3d4.036070837399057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061128be2e1fe6d%3A0x92daa1444781c48b!2sDouala%2C%20Cameroon!5e0!3m2!1sen!2srw!4v1736250045340!5m2!1sen!2srw"
                     style={{ border: 0, width: "100%", height: "100%" }}
                     alt="google map"
-                    allowFullScreen=""
+                    allowfullscreen=""
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe> */}
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
             </div>
