@@ -45,7 +45,7 @@ export default function Home() {
               <Link href={"/contact"}>Contact Us </Link>
             </button>
             <button className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-indigo-900 transition-all">
-              <Link href={"/realizations"}>View Projects </Link>
+              <Link href={"/realisations"}>View Projects </Link>
             </button>
           </div>
         </div>
