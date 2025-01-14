@@ -1,17 +1,34 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const projects = [
   {
     title: "School Management App",
-    description: "A productivity app for managing personal and team tasks effectively.",
+    description: "A web app for managing students, teachers, and classes efficiently.",
     image: "/images/schoolmanagement.png",
     liveDemo: "https://school-mana.vercel.app/admin",
-    learnMore: "https://your-taskapp-details.com",
+    details: `
+      The School Management App is a comprehensive solution for schools to manage daily administrative tasks. 
+      It includes features such as:
+      - Admin Dashboard for managing students, teachers, and schedules.
+      - Teacher and Student Profiles.
+      - Class scheduling and progress tracking.
+      - Secure authentication for multiple user roles.
+      
+      **Technologies Used:**
+      - Frontend: React.js and tailwind css
+      -No backend or database was involved
+      - Deployment: Vercel and Heroku
+    `,
   },
- 
+  // Add more projects here if needed
 ];
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const closeModal = () => setSelectedProject(null);
+
   return (
     <div className="min-h-screen bg-gray-50 py-10">
       <div className="max-w-7xl mx-auto px-4">
@@ -41,9 +58,7 @@ export default function Projects() {
 
               {/* Text Section */}
               <div className="p-6">
-                <h3 className="text-lg font-bold text-indigo-900">
-                  {project.title}
-                </h3>
+                <h3 className="text-lg font-bold text-indigo-900">{project.title}</h3>
                 <p className="text-gray-600 mt-2">{project.description}</p>
 
                 {/* Buttons Section */}
@@ -54,28 +69,35 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="relative px-4 py-2 text-white text-sm bg-indigo-600 overflow-hidden group transition-colors duration-300"
                   >
-                    {/* Gradient background for hover */}
-                    <span className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-pink-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
                     <span className="relative z-10">Live Demo</span>
                   </a>
-                  <a
-                    href={project.learnMore}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center text-indigo-600 text-sm  hover:text-indigo-800 transition-colors duration-300"
+                  <button
+                    onClick={() => setSelectedProject(project)}
+                    className="text-indigo-600 text-sm hover:text-indigo-800 transition-colors duration-300"
                   >
-                    <span className="mr-2">Learn More</span>
-                    <span
-                      className="transform transition-transform duration-300 group-hover:translate-x-1"
-                    >
-                      →
-                    </span>
-                  </a>
+                    Learn More →
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Modal */}
+        {selectedProject && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white  shadow-lg p-6 max-w-lg w-full pt-24">
+              <h2 className="text-2xl font-bold text-indigo-900">{selectedProject.title}</h2>
+              <p className="text-gray-600 mt-4 whitespace-pre-wrap">{selectedProject.details}</p>
+              <button
+                onClick={closeModal}
+                className="mt-6 bg-indigo-600 text-white px-4 py-2  hover:bg-indigo-700 transition"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
