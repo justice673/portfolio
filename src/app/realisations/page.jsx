@@ -2,33 +2,13 @@ import React from "react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A feature-rich e-commerce platform with payment gateway integration.",
-    image: "/images/project1.jpg",
-    liveDemo: "https://your-ecommerce-demo.com",
-    learnMore: "https://your-ecommerce-details.com",
-  },
-  {
-    title: "Portfolio Website",
-    description: "A modern and fully responsive portfolio site to showcase projects.",
-    image: "/images/project2.jpg",
-    liveDemo: "https://your-portfolio-demo.com",
-    learnMore: "https://your-portfolio-details.com",
-  },
-  {
     title: "School Management App",
     description: "A productivity app for managing personal and team tasks effectively.",
     image: "/images/schoolmanagement.png",
     liveDemo: "https://school-mana.vercel.app/admin",
     learnMore: "https://your-taskapp-details.com",
   },
-  {
-    title: "Chat Application",
-    description: "A real-time chat app using WebSockets and modern UI components.",
-    image: "/images/project4.jpg",
-    liveDemo: "https://your-chatapp-demo.com",
-    learnMore: "https://your-chatapp-details.com",
-  },
+ 
 ];
 
 export default function Projects() {
@@ -37,7 +17,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-indigo-800">My Projects</h1>
+          <h1 className="text-4xl font-bold text-indigo-800 mt-12">My Projects</h1>
           <p className="text-gray-600 mt-2">
             A collection of my recent works showcasing skills and creativity.
           </p>
